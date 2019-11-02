@@ -16,13 +16,8 @@
     <div class="col-6">
 
     </div>
-    <div class="dropdown col-6">
-      <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-        Dropdown
-      </button>
-      <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
-        <button class="dropdown-item" type="button" *ngFor="let i of tinhThanh" routerLink="cumrap/{{i.routeName}}">{{i.name}}</button>
-      </div>
+    <div class="col-6">
+
     </div>
   </div>
 </nav>
@@ -31,21 +26,10 @@
     <router-outlet></router-outlet>
   </section>
 </main>
-<!--  <section #section1>-->
-<!--    <app-tabset></app-tabset>-->
-<!--  </section>-->
-<!--  <section #section2>-->
-<!--    <app-listgroup></app-listgroup>-->
-<!--  </section>-->
-<!--  <section #section3>-->
-<!--    <h1>Section 3</h1>-->
-<!--    <p>Soluta quibusdam ad nostrum vel voluptate delectus sequi dolores quia quaerat officia corrupti, aperiam fugit-->
-<!--      facere debitis repudiandae praesentium sapiente inventore repellendus, nemo commodi alias!</p>-->
-<!--  </section>-->
 
-<footer>
-  &copy;2018 Footer
-</footer>
+<div class="footer">
+  <app-footer></app-footer>
+</div>
 
 
 

@@ -17,6 +17,7 @@ import {ListGroupModule} from './component/listgroup/listgroup.module';
 import {HttpClientModule} from '@angular/common/http';
 import {ListPhimService} from './service/list-phim.service';
 import {ListRapService} from './service/list-rap.service';
+import { FooterComponent } from './component/footer/footer.component';
 
 
 @NgModule({
@@ -26,6 +27,7 @@ import {ListRapService} from './service/list-rap.service';
     TabsetComponent,
     NewsComponent,
     MovieInfoComponent,
+    FooterComponent,
   ],
   imports: [
     BrowserModule,

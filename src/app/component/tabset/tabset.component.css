@@ -79,3 +79,10 @@ span{
   font-size: 24px;
   font-family: 'Roboto', sans-serif;
 }
+.carousel-control-prev{
+  width: 60px;
+}
+.carousel-control-next{
+  width: 60px;
+}
+

@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import {TabsetComponent} from './component/tabset/tabset.component';
+import {ListGroupComponent} from './component/listgroup/listgroup.component';
 
 
 
@@ -11,7 +12,8 @@ const routes: Routes = [
   },
   {
     path: 'cumrap', loadChildren: () => import('./component/listgroup/listgroup.module').then(m => m.ListGroupModule)
-  }
+  },
+
 ];
 
 @NgModule({
