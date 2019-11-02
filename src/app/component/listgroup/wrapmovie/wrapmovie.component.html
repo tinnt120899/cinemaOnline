@@ -1,0 +1,20 @@
+<div class="scroll">
+<div class="cards mb-3" *ngFor="let item of listRap; let i = index"  [ngClass]="{'opacity': i === 0 }">
+  <div class="row no-gutters">
+    <div class="col-md-2">
+      <img src={{item.srcImageSm}} class="card-img" style="margin-top: 12px; margin-left: 10px">
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <p class="card-text spanItem text-danger"><b>{{item.tenPhim}}</b></p>
+        <p class="card-text spanItem">{{item.thoiLuongChieu}}</p>
+        <span class="card-text badge badge-success" >{{item.suatChieu}}</span>
+      </div>
+    </div>
+    <div class="col-md-2" >
+      <button type="button" class="btn btn-outline-success" [ngClass]="{ 'disabled': item.trangThai === 'Sắp chiếu'}">Đặt vé</button>
+    </div>
+  </div>
+  <hr>
+</div>
+</div>

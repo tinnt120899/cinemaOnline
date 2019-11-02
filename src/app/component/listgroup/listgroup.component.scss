@@ -1,0 +1,36 @@
+.tablist{
+  margin-top: 25px !important;
+  max-width: 940px;
+  float: none;
+  margin: auto;
+  clear: both;
+  margin-bottom: 25px;
+
+}
+div.col-4{
+  padding-right: 0;
+}
+div.col-7{
+  padding-left: 0;
+}
+a {
+  width: 90px !important;
+  height: 78px;
+}
+.wrapInfo{
+  padding-left: 60px;
+}
+.wrapContainer{
+  display: flex;
+  flex-direction: row;
+}
+img{
+  width: 50px;
+}
+
+.wrapInfo span{
+
+  font-size: 12px;
+  font-family: 'Roboto', sans-serif;
+}
+

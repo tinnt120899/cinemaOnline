@@ -1,0 +1,81 @@
+
+.item {
+  width: 215px;
+  height: 318px;
+}
+
+.card {
+
+  padding-right: 0px;
+  padding-left: 0px;
+  border: 0;
+}
+
+.tabset {
+  padding-top: 75px;
+  max-width: 940px;
+  float: none;
+  margin: auto;
+  clear: both;
+
+}
+
+.carousel-item {
+  left: 20px;
+}
+
+p {
+  margin-top: 0;
+  text-align: left;
+  padding-top: 5px;
+  padding-right: 30px;
+  margin-bottom: 0;
+  line-height: 1.2rem;
+  margin-left: 16px;
+
+}
+span{
+  text-align: left;
+}
+.txt_thoiLuong{
+  text-align: left;
+  padding-bottom: 25px;
+  padding-top: 5px;
+}
+
+#carouselExampleInterval1{
+  margin-top: 30px ;
+}
+#quangCao{
+  max-width: 980px;
+  float: none;
+  margin: auto;
+  clear: both;
+  margin-bottom: 30px;
+}
+/deep/ .tabset ul{
+  margin-bottom: 30px;
+}
+
+/deep/ .nav-item a{
+  font-weight: bold;
+  color: black;
+  border: none;
+  transition: all .2s;
+  cursor: pointer;
+  font-size: 18px;
+  font-family: 'Roboto', sans-serif;
+}
+/deep/ .nav-item a:hover{
+
+  background-color: transparent;
+  font-size: 24px;
+  font-family: 'Roboto', sans-serif;
+}
+/deep/ .nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+  font-weight: bold;
+  color: #fa5238;
+  background-color: transparent;
+  font-size: 24px;
+  font-family: 'Roboto', sans-serif;
+}

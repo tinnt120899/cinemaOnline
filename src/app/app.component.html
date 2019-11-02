@@ -1,0 +1,53 @@
+<!--component 1-->
+<header>
+  <app-slideshow></app-slideshow>
+</header>
+<!--page 1-->
+<nav class="row">
+  <div class="col-sm" style="padding-top: 3px">
+    <fa-icon [icon]="fafilm" id="thing" size="3x" style="margin: 2rem; color: #eccc68"></fa-icon>
+  </div>
+  <div class="col-sm text-center" style="padding-top: 15px">
+    <a routerLink="lichchieu">Lịch chiếu</a>
+    <a routerLink="cumrap">Cụm rạp</a>
+    <a routerLink="">Tin tức</a>
+  </div>
+  <div class="col-sm nav-info-right row">
+    <div class="col-6">
+
+    </div>
+    <div class="dropdown col-6">
+      <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Dropdown
+      </button>
+      <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+        <button class="dropdown-item" type="button" *ngFor="let i of tinhThanh" routerLink="cumrap/{{i.routeName}}">{{i.name}}</button>
+      </div>
+    </div>
+  </div>
+</nav>
+<main>
+  <section>
+    <router-outlet></router-outlet>
+  </section>
+</main>
+<!--  <section #section1>-->
+<!--    <app-tabset></app-tabset>-->
+<!--  </section>-->
+<!--  <section #section2>-->
+<!--    <app-listgroup></app-listgroup>-->
+<!--  </section>-->
+<!--  <section #section3>-->
+<!--    <h1>Section 3</h1>-->
+<!--    <p>Soluta quibusdam ad nostrum vel voluptate delectus sequi dolores quia quaerat officia corrupti, aperiam fugit-->
+<!--      facere debitis repudiandae praesentium sapiente inventore repellendus, nemo commodi alias!</p>-->
+<!--  </section>-->
+
+<footer>
+  &copy;2018 Footer
+</footer>
+
+
+
+
+

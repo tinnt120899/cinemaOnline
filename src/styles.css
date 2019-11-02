@@ -1,0 +1,14 @@
+html app-root{
+  scroll-behavior: smooth;
+}
+body app-root{
+  margin: 0;
+  display: grid;
+  grid-template-columns: min-content 1fr;
+  font-family: system-ui, sans-serif;
+
+  /* this breaks position sticky in Firefox */
+  /* overflow-x: hidden; */
+}
+
+

@@ -1,0 +1,31 @@
+<div class="card tablist">
+  <div class="row">
+    <div class="col-1">
+      <div class="list-group" id="list-tab" role="tablist">
+        <a *ngFor="let item of listCinema; let i = index"
+           [href]="'#' + item.href"
+           [id]="item.id"
+           [ngClass]="{'active': i === 0 }"
+           aria-controls="home"
+           class="list-group-item list-group-item-action"
+           data-toggle="list"
+           role="tab">
+          <img [src]="item.srcImage"></a>
+      </div>
+    </div>
+    <div class="col-4">
+      <div class="tab-content" id="nav-tabContent">
+        <div *ngFor="let item of listCinema; let i = index"
+             [id]="item.href"
+             [ngClass]="{'active': i === 0 }"
+             class="tab-pane fade show "
+             role="tabpanel">
+          <app-cumrap [nameList]="item.nameList"></app-cumrap>
+        </div>
+      </div>
+    </div>
+    <div class="col-7">
+      <app-wrapmovie></app-wrapmovie>
+    </div>
+  </div>
+</div>
