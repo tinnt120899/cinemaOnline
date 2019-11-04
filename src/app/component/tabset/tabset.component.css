@@ -34,30 +34,34 @@ p {
   margin-left: 16px;
 
 }
-span{
+
+span {
   text-align: left;
 }
-.txt_thoiLuong{
+
+.txt_thoiLuong {
   text-align: left;
   padding-bottom: 25px;
   padding-top: 5px;
 }
 
-#carouselExampleInterval1{
-  margin-top: 30px ;
+#carouselExampleInterval1 {
+  margin-top: 30px;
 }
-#quangCao{
+
+#quangCao {
   max-width: 980px;
   float: none;
   margin: auto;
   clear: both;
   margin-bottom: 30px;
 }
-/deep/ .tabset ul{
+
+/deep/ .tabset ul {
   margin-bottom: 30px;
 }
 
-/deep/ .nav-item a{
+/deep/ .nav-item a {
   font-weight: bold;
   color: black;
   border: none;
@@ -66,23 +70,103 @@ span{
   font-size: 18px;
   font-family: 'Roboto', sans-serif;
 }
-/deep/ .nav-item a:hover{
+
+/deep/ .nav-item a:hover {
 
   background-color: transparent;
   font-size: 24px;
   font-family: 'Roboto', sans-serif;
 }
-/deep/ .nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+
+/deep/ .nav-pills .nav-link.active, .nav-pills .show > .nav-link {
   font-weight: bold;
   color: #fa5238;
   background-color: transparent;
   font-size: 24px;
   font-family: 'Roboto', sans-serif;
 }
-.carousel-control-prev{
+
+.carousel-control-prev {
   width: 60px;
 }
-.carousel-control-next{
+
+.carousel-control-next {
   width: 60px;
 }
+/*Animation transform*/
+button.modal-view {
+  background: #fff none repeat scroll 0 0;
+  border: 1px solid #e5e5e5;
+  bottom: 0;
+  display: inline-block;
+  height: 35px;
+  left: 0;
+  line-height: 35px;
+  margin-top: 10px;
+  margin-left: 20px;
+  opacity: 0;
+  position: absolute;
+  right: 0;
+  text-align: center;
+  text-transform: uppercase;
+  top: 0;
+  transition: all 500ms ease-out 0s;
+  width: 130px;
+  z-index: 12;
+  border: none;
+  color: #333;
+  font-weight: 700;
+  border: 1px solid #e5e5e5;
+  transform: scale(.5);
+}
+
+.single-features:hover button.modal-view {
+  transform: scale(1);
+  z-index: 999;
+  opacity: 1
+}
+
+button.modal-view:hover {
+  background: #cccccc;
+  color: #fff;
+  text-decoration: none
+}
+
+#productModal .modal-dialog {
+  margin: 5% auto;
+  max-width: 96%;
+  min-height: 300px;
+  padding: 20px;
+  -webkit-transition: all 0.5s ease 0s;
+  transition: all 0.5s ease 0s;
+  width: 870px;
+}
+#productModal .modal-header {
+  border: 0 none;
+  padding: 0;
+  min-height: auto;
+}
+#productModal button.close {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+  z-index: 2;
+  opacity: 1;
+
+}
+#productModal button.close span {
+  border: 1px solid #909295;
+  border-radius: 60px;
+  color: #909295;
+  display: block;
+  height: 30px;
+  line-height: 25px;
+  text-align: center;
+  width: 30px;
+  padding-top: 1px;
+}
+
+
 

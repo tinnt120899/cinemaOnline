@@ -1,13 +1,24 @@
 <div id="carouselExampleInterval" class="carousel slide" data-ride="carousel">
 
-  <div class="carousel-inner " >
+  <div class="carousel-inner single-features">
     <div class="carousel-item active" data-interval="5000" >
       <img src="../../assets/img/header/natra.jpg" class="d-block w-100" alt="...">
     </div>
     <div class="carousel-item " data-interval="2000" *ngFor="let link of linkImg">
       <img src={{link.linkName}} class="d-block w-100" >
     </div>
+    <a class="modal-view" href="#" data-toggle="modal" data-target="#productModal"><div class="icon"></div></a>
   </div>
+
+<!--  <div class="carousel-inner recent-post">-->
+<!--    <div class="carousel-item post-thumb active" data-interval="5000" >-->
+<!--      <a href="#" class="icon-play"><img src="../../assets/img/header/natra.jpg" class="d-block w-100" alt="..."></a>-->
+<!--    </div>-->
+<!--    <div class="carousel-item " data-interval="2000" *ngFor="let link of linkImg">-->
+<!--      <img src={{link.linkName}} class="d-block w-100" >-->
+<!--    </div>-->
+<!--    <a class="modal-view" href="#" data-toggle="modal" data-target="#productModal">Quick View</a>-->
+<!--  </div>-->
 
 
   <a class="carousel-control-prev" href="#carouselExampleInterval" role="button" data-slide="prev">

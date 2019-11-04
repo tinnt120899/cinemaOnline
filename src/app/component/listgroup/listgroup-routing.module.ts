@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import {RouterModule, Routes} from '@angular/router';
 
 import {ListGroupComponent} from './listgroup.component';
+import {MovieInfoComponent} from '../tabset/movie-info/movie-info.component';
 
 
 
@@ -34,8 +35,7 @@ const routes: Routes = [
   {
     path: 'bhdq10',
     component: ListGroupComponent
-  },
-
+  }
 ];
 
 @NgModule({

@@ -17,4 +17,7 @@ export class ListPhimService {
   public getSuatChieuPhim(routeName) {
     return this.httpClient.get(this.REST_API_SERVER + routeName);
   }
+  public getThongTinPhim(id) {
+    return this.httpClient.get(this.REST_API_SERVER + 'thongtinphim/' + id);
+  }
 }

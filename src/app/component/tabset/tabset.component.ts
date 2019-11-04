@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {NgbTabsetConfig} from '@ng-bootstrap/ng-bootstrap';
 import {ListPhimService} from '../../service/list-phim.service';
+import { faSearch } from '@fortawesome/free-solid-svg-icons';
 
 
 @Component({
@@ -15,6 +16,7 @@ export class TabsetComponent implements OnInit {
     totalPage: 0
   };
   listPhim: {};
+  fasearch = faSearch;
 
   constructor(config: NgbTabsetConfig, private listPhimService: ListPhimService) {
     // customize default values of tabsets used by this component tree
@@ -31,5 +33,10 @@ export class TabsetComponent implements OnInit {
 
   InRange(end: number) {
     return Array(end);
+  }
+
+  getId(id: any[]) {
+    console.log(id);
+    return id;
   }
 }
