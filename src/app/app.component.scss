@@ -45,20 +45,9 @@ section {
 }
 
 #thing {
-  padding: 10px;
-  border-radius: 5px;
-
-  /* HOVER OFF */
-  -webkit-transition: padding 2s;
+  cursor: pointer;
 }
 
-#thing:hover {
-  padding: 20px;
-  border-radius: 15px;
-
-  /* HOVER ON */
-  -webkit-transition: border-radius 2s;
-}
 
 .nav-info-right .dropdown button{
   margin-top: 10px;

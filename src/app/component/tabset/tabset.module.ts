@@ -15,7 +15,7 @@ import {NgbTabsetModule} from '@ng-bootstrap/ng-bootstrap';
     CommonModule,
     NgbTabsetModule
   ],
-  exports: [],
+  exports: [NgbTabsetModule],
   providers: []
 
 })

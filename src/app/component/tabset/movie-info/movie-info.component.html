@@ -1,2 +1,70 @@
-<span>Tên phim: {{thongTinPhim.tenPhim}}</span>
-<span>Đạo diễn: {{thongTinPhim.daoDien}}</span>
+<div class="container-fluid">
+  <div class="row header">
+    <div class="col-2">
+
+    </div>
+    <div class="col-8">
+      <div class="row no-gutters">
+        <div class="col-md-3">
+          <img src="{{thongTinPhim.srcImageMd}}">
+        </div>
+        <div class="col-md-4">
+          <div class="card-body text-left">
+            <span>{{thongTinPhim.ngayPhatHanh}}</span><br>
+            <span class="title">{{thongTinPhim.tenPhim}}</span><br>
+            <span>{{thongTinPhim.thoiLuongChieu}}</span><br>
+            <button class="button" style="vertical-align:middle"><span>Đặt vé</span></button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-2">
+
+    </div>
+  </div>
+  <div class="row">
+    <ngb-tabset class="tabset1">
+      <ngb-tab title="Thông tin">
+        <ng-template ngbTabContent>
+          <div class="col-2"></div>
+          <div class="col-8">
+            <div class="row text-left" style="width: 900px">
+              <div class="col-6">
+                <div class="row">
+                  <div class="col-5">
+                    <span class="bold">Ngày phát hành:</span><br>
+                    <span class="bold">Đạo diễn:</span><br>
+                    <span class="bold">Diễn viên:</span><br>
+                    <span class="bold">Thể loại:</span><br>
+                    <span class="bold">Định dạng:</span><br>
+                    <span class="bold">Quốc Gia SX:</span>
+                  </div>
+                  <div class="col-6">
+                    <span>{{thongTinPhim.ngayPhatHanh}}</span><br>
+                    <span>{{thongTinPhim.daoDien}}</span><br>
+                    <span>{{thongTinPhim.dienVien}}</span><br>
+                    <span>{{thongTinPhim.theLoai}}</span><br>
+                    <span>2D/Digital</span><br>
+                    <span>{{thongTinPhim.quocGiaSx}}</span>
+                  </div>
+                  <div class="col-1"></div>
+                </div>
+              </div>
+              <div class="col-6">
+                <span class="bold">Nội dung:</span><br>
+                <span>{{thongTinPhim.noiDung}}</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-2"></div>
+        </ng-template>
+      </ngb-tab>
+      <ngb-tab title="Trailer">
+        <ng-template ngbTabContent>
+          <iframe allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen frameborder="0" width="900" height="506" src="{{thongTinPhim.linkTrailer}}"></iframe>
+        </ng-template>
+      </ngb-tab>
+    </ngb-tabset>
+  </div>
+</div>

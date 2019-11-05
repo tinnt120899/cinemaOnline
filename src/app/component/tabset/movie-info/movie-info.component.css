@@ -1,0 +1,100 @@
+.container-fluid{
+  background-color: #0a2029;
+}
+.row.no-gutters{
+  margin-top: 110px;
+
+}
+span.title{
+  color: #ffffff;
+  font-size: 22px;
+  font-weight: bold;
+}
+span{
+  color: #a4b0be;
+}
+.bold{
+  color: #FFFFFF;
+}
+/*button*/
+.button {
+  display: inline-block;
+  border-radius: 4px;
+  background-color: #1e90ff;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 20px;
+  padding: 20px;
+  width: 140px;
+  height: 60px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+  bottom: 5px;
+  color: #ffffff;
+}
+
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+/*tabset*/
+.tabset1 {
+  padding-top: 75px;
+  max-width: 940px;
+  float: none;
+  margin: auto;
+  clear: both;
+  margin-bottom: 90px;
+}
+
+/deep/ .tabset1 ul {
+  margin-bottom: 30px;
+  margin-right: 60px;
+}
+
+/deep/ .nav-item a {
+  font-weight: bold;
+  color: #FFFFFF;
+  border: none;
+  transition: all .2s;
+  cursor: pointer;
+  font-size: 18px;
+  font-family: 'Roboto', sans-serif;
+}
+
+/deep/ .nav-item a:hover {
+
+  background-color: transparent;
+  font-size: 24px;
+  font-family: 'Roboto', sans-serif;
+}
+
+/deep/ .nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+  font-weight: bold;
+  color: #1e90ff;
+  background-color: transparent;
+  font-size: 24px;
+  font-family: 'Roboto', sans-serif;
+}

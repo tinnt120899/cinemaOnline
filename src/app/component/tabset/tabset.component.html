@@ -13,21 +13,21 @@
                     <p><b>{{list['listPhim'][j].tenPhim}}</b></p>
                     <span class="txt_thoiLuong">{{list['listPhim'][j].thoiLuongChieu}}</span>
                     <button (click)="getId([list['listPhim'][j]._id])" class="modal-view" data-target="#productModal"
-                       data-toggle="modal" routerLink="/thongtinphim/{{list['listPhim'][j]._id}}">Xem thêm</button>
+                            data-toggle="modal" routerLink="/thongtinphim/{{list['listPhim'][j]._id}}"><span>Xem thêm</span></button>
                   </div>
                   <div *ngSwitchCase="1" class="single-features">
                     <img [src]="list['listPhim'][j + 8].srcImageMd" class="card-img-top item ">
                     <p><b>{{list['listPhim'][j + 8].tenPhim}}</b></p>
                     <span class="txt_thoiLuong">{{list['listPhim'][j + 8].thoiLuongChieu}}</span>
                     <button (click)="getId([list['listPhim'][j]._id])" class="modal-view" data-target="#productModal"
-                       data-toggle="modal" routerLink="/thongtinphim">Xem thêm</button>
+                       data-toggle="modal" routerLink="/thongtinphim"><span>Xem thêm</span></button>
                   </div>
                   <div *ngSwitchCase="2" class="single-features">
                     <img [src]="list['listPhim'][j + 16].srcImageMd" class="card-img-top item ">
                     <p><b>{{list['listPhim'][j + 16].tenPhim}}</b></p>
                     <span class="txt_thoiLuong">{{list['listPhim'][j + 16].thoiLuongChieu}}</span>
                     <button (click)="getId([list['listPhim'][j]._id])" class="modal-view" data-target="#productModal"
-                       data-toggle="modal" routerLink="/thongtinphim">Xem thêm</button>
+                       data-toggle="modal" routerLink="/thongtinphim"><span>Xem thêm</span></button>
                   </div>
                 </div>
               </div>
@@ -56,21 +56,22 @@
                     <img [src]="list['listPhim'][j].srcImageMd" class="card-img-top item ">
                     <p><b>{{list['listPhim'][j + 8].tenPhim}}</b></p>
                     <span class="txt_thoiLuong">{{list['listPhim'][j + 8].thoiLuongChieu}}</span>
-                    <a class="modal-view" data-target="#productModal" data-toggle="modal">Xem thêm></a>
+                    <button (click)="getId([list['listPhim'][j]._id])" class="modal-view" data-target="#productModal1"
+                            data-toggle="modal" routerLink="/thongtinphim"><span>Xem thêm</span></button>
                   </div>
                   <div *ngSwitchCase="1" class="single-features">
                     <img [src]="list['listPhim'][j + 16].srcImageMd" class="card-img-top item ">
                     <p><b>{{list['listPhim'][j + 16].tenPhim}}</b></p>
                     <span class="txt_thoiLuong">{{list['listPhim'][j + 16].thoiLuongChieu}}</span>
-                    <button (click)="getId([list['listPhim'][j]._id])" class="modal-view" data-target="#productModal"
-                       data-toggle="modal" routerLink="/thongtinphim">Xem thêm</button>
+                    <button (click)="getId([list['listPhim'][j]._id])" class="modal-view" data-target="#productModal1"
+                       data-toggle="modal" routerLink="/thongtinphim"><span>Xem thêm</span></button>
                   </div>
                   <div *ngSwitchCase="2" class="single-features">
                     <img [src]="list['listPhim'][j].srcImageMd" class="card-img-top item ">
                     <p><b>{{list['listPhim'][j].tenPhim}}</b></p>
                     <span class="txt_thoiLuong">{{list['listPhim'][j].thoiLuongChieu}}</span>
-                    <button (click)="getId([list['listPhim'][j]._id])" class="modal-view" data-target="#productModal"
-                       data-toggle="modal" routerLink="/thongtinphim">Xem thêm</button>
+                    <button (click)="getId([list['listPhim'][j]._id])" class="modal-view" data-target="#productModal1"
+                       data-toggle="modal" routerLink="/thongtinphim"><span>Xem thêm</span></button>
                   </div>
                 </div>
               </div>

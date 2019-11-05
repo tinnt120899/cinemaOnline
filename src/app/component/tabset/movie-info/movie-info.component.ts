@@ -4,7 +4,7 @@ import {ListPhimService} from '../../../service/list-phim.service';
 @Component({
   selector: 'app-movie-info',
   templateUrl: './movie-info.component.html',
-  styleUrls: ['./movie-info.component.scss']
+  styleUrls: ['./movie-info.component.css']
 })
 export class MovieInfoComponent implements OnInit {
   thongTinPhim: {};

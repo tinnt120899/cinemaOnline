@@ -9,6 +9,10 @@ import {MovieInfoComponent} from './component/tabset/movie-info/movie-info.compo
 
 const routes: Routes = [
   {
+    path: '',
+    component: TabsetComponent
+  },
+  {
     path: 'lichchieu',
     component: TabsetComponent
   },
