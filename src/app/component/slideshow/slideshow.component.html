@@ -7,21 +7,29 @@
     <div class="carousel-item " data-interval="2000" *ngFor="let link of linkImg">
       <img src={{link.linkName}} class="d-block w-100" >
     </div>
-    <a class="modal-view" href="#" data-toggle="modal" data-target="#productModal"><div class="icon"></div></a>
+    <a class="modal-view" href="#" data-toggle="modal" data-target="#productModal"><div class="icon"></div>
+      <!-- Modal -->
+      <div class="modal fade" id="productModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-body">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+              <!-- 16:9 aspect ratio -->
+              <div class="embed-responsive embed-responsive-16by9">
+                <iframe allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen frameborder="0"
+                        src="https://www.youtube.com/embed/t7srZZh9lxY"></iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </a>
   </div>
 
-<!--  <div class="carousel-inner recent-post">-->
-<!--    <div class="carousel-item post-thumb active" data-interval="5000" >-->
-<!--      <a href="#" class="icon-play"><img src="../../assets/img/header/natra.jpg" class="d-block w-100" alt="..."></a>-->
-<!--    </div>-->
-<!--    <div class="carousel-item " data-interval="2000" *ngFor="let link of linkImg">-->
-<!--      <img src={{link.linkName}} class="d-block w-100" >-->
-<!--    </div>-->
-<!--    <a class="modal-view" href="#" data-toggle="modal" data-target="#productModal">Quick View</a>-->
-<!--  </div>-->
-
-
-  <a class="carousel-control-prev" href="#carouselExampleInterval" role="button" data-slide="prev">
+<a class="carousel-control-prev" href="#carouselExampleInterval" role="button" data-slide="prev">
     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
     <span class="sr-only">Previous</span>
   </a>

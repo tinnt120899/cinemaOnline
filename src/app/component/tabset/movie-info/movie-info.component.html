@@ -61,8 +61,8 @@
       </ngb-tab>
       <ngb-tab title="Trailer">
         <ng-template ngbTabContent>
-          <iframe allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                  allowfullscreen frameborder="0" width="900" height="506" src="{{thongTinPhim.linkTrailer}}"></iframe>
+          <iframe allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen
+                  [src]="transform(link)" frameborder="0" height="506" width="900"></iframe>
         </ng-template>
       </ngb-tab>
     </ngb-tabset>
