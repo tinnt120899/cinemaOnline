@@ -10,7 +10,8 @@ import {MovieInfoComponent} from '../tabset/movie-info/movie-info.component';
 const routes: Routes = [
   {
     path: '',
-    component: ListGroupComponent
+    redirectTo: '/bhdbc',
+    pathMatch: 'full'
   },
   {
     path: 'bhdbc',

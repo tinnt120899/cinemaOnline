@@ -29,7 +29,7 @@ a.modal-view {
 
 .single-features:hover a.modal-view {
   transform: scale(1);
-  z-index: 999;
+  z-index: 9999;
   opacity: 1;
 }
 
@@ -39,49 +39,6 @@ a.modal-view:hover {
   text-decoration: none
 }
 
-#productModal .modal-dialog {
-  ////margin: 5% auto;
-  ////max-width: 96%;
-  //
-  //padding: 20px;
-  ////-webkit-transition: all 0.5s ease 0s;
-  ////transition: all 0.5s ease 0s;
-
-
-  width: 1000px;
-  margin: 30px auto;
-}
-
-#productModal .modal-body {
-  padding: 0;
-  min-height: auto;
-  position:relative;
-
-}
-
-#productModal button.close {
-  position:absolute;
-  right:-30px;
-  top:0;
-  z-index:999;
-  font-size:2rem;
-  font-weight: normal;
-  color:#fff;
-  opacity:1;
-
-
-}
-//#productModal button.close span {
-//  border: 1px solid #909295;
-//  border-radius: 60px;
-//  color: #909295;
-//  display: block;
-//  height: 30px;
-//  line-height: 25px;
-//  text-align: center;
-//  width: 30px;
-//  padding-top: 1px;
-//}
 
 .icon{
   margin-top: 5px;
@@ -91,6 +48,28 @@ a.modal-view:hover {
   border-style: solid;
   border-width: 14px 0 14px 28px;
   border-color: transparent transparent transparent #ffffff;
+}
+
+//embed video
+body {margin:2rem;}
+
+.modal-dialog {
+  max-width: 1000px;
+  margin: 30px auto;
+}
+.modal-body {
+  position:relative;
+  padding:0px;
+}
+.close {
+  position:absolute;
+  right:-30px;
+  top:0;
+  z-index:999;
+  font-size:2rem;
+  font-weight: normal;
+  color:#fff;
+  opacity:1;
 }
 
 

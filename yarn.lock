@@ -358,6 +358,13 @@
     semver "6.3.0"
     semver-intersect "1.4.0"
 
+"@tinymce/tinymce-angular@^3.3.1":
+  version "3.3.1"
+  resolved "https://registry.yarnpkg.com/@tinymce/tinymce-angular/-/tinymce-angular-3.3.1.tgz#bc0260c72cc6a58ab117c79dbc909bc2c0ba20ad"
+  integrity sha512-a7WyOAQso7RVCllklicE1M9wvNAXrnB+SC4/JTlZvXEy57fH/t3XHT9c4fd0BqlAUsBxDobUmERcWLjc/qhCnA==
+  dependencies:
+    tslib "^1.9.0"
+
 "@types/events@*":
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/@types/events/-/events-3.0.0.tgz#2862f3f58a9a7f7c3e78d79f130dd4d71c25c2a7"
@@ -685,6 +692,13 @@ amdefine@>=0.0.4:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/amdefine/-/amdefine-1.0.1.tgz#4a5282ac164729e93619bcfd3ad151f817ce91f5"
   integrity sha1-SlKCrBZHKek2Gbz9OtFR+BfOkfU=
+
+angular-archwizard@^5.0.0:
+  version "5.0.0"
+  resolved "https://registry.yarnpkg.com/angular-archwizard/-/angular-archwizard-5.0.0.tgz#6a59e238a58b896fba6007dbde06848256ff2e4a"
+  integrity sha512-bj+cshnEHKghGXgjiSdyG+Qs3+gp+5/GMzXm3F2QzIESC7kd8KxaXASwTdo4mbXx8UthT43m3gfWrKUD+GPXOQ==
+  dependencies:
+    tslib "^1.9.0"
 
 ansi-colors@4.1.1:
   version "4.1.1"
@@ -6568,6 +6582,11 @@ timers-browserify@^2.0.4:
   integrity sha512-60aV6sgJ5YEbzUdn9c8kYGIqOubPoUdqQCul3SBAsRCZ40s6Y5cMcrW4dt3/k/EsbLVJNl9n6Vz3fTc+k2GeKQ==
   dependencies:
     setimmediate "^1.0.4"
+
+tinymce@^5.1.1:
+  version "5.1.1"
+  resolved "https://registry.yarnpkg.com/tinymce/-/tinymce-5.1.1.tgz#fd0d2ad1d07e9aa60a88d391b1cdcaa6402f3104"
+  integrity sha512-gdIt9kMNkQrDA0vm9mLcqnDBMMwDV6xsIaug0UzbRUnLpcOjR8JnE0P12GwrA/+9/p8IZiHcolGN9xAD/XxDzw==
 
 tmp@0.0.30:
   version "0.0.30"

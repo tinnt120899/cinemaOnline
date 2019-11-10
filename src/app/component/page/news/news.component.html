@@ -1,1 +1,43 @@
-<p>news works!</p>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-12">
+      <div class="card-box">
+<!--Right Sidebar-->
+<div class="inbox-rightbar">
+<!--  &lt;!&ndash;Button Group&ndash;&gt;-->
+<!--  <div class="mt-3">-->
+    <div [innerHTML]="pageHtml"></div>
+    <div [innerHTML]="pageHtml"></div>
+    <div [innerHTML]="pageHtml"></div>
+    <div [innerHTML]="pageHtml"></div>
+    <div [innerHTML]="pageHtml"></div>
+
+<!--  </div>-->
+  <div class="row justify-content-md-between align-items-md-center">
+    <div class="col-7">
+      Showing {{startIndex}} - {{endIndex}} of {{totalRecords}}
+    </div> <!-- end col-->
+    <div class="col-5">
+      <div class="text-md-right float-md-right mt-2">
+        <ngb-pagination [collectionSize]="totalRecords" (pageChange)="onPageChange($event)" [(page)]="page"
+                        [pageSize]="pageSize">
+        </ngb-pagination>
+        <!--Pagination-->
+      </div>
+    </div> <!-- end col-->
+  </div>
+</div>
+<!--End Right Sidebar-->
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--<ul class="message-list">-->
+<!--  <li *ngFor="let email of emailData | slice:0:4; let i = index; ">-->
+<!--    <div class="col-mail col-mail-2">-->
+<!--      <div class="date">{{email.date | date:'MMM d'}}</div>-->
+<!--      <div [innerHTML]="pageHtml"></div>-->
+<!--    </div>-->
+<!--  </li>-->
+<!--</ul>-->

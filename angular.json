@@ -25,7 +25,10 @@
             "aot": false,
             "assets": [
               "src/favicon.ico",
-              "src/assets"
+              "src/assets",
+              { "glob": "**/*", "input": "node_modules/tinymce/skins", "output": "/tinymce/skins/" },
+              { "glob": "**/*", "input": "node_modules/tinymce/themes", "output": "/tinymce/themes/" },
+              { "glob": "**/*", "input": "node_modules/tinymce/plugins", "output": "/tinymce/plugins/" }
             ],
             "styles": [
               "node_modules/minireset.css/minireset.css",
@@ -33,9 +36,11 @@
               "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "node_modules/igniteui-angular/styles/igniteui-angular.css",
               "src/assets/slick/slick.css"
+
             ],
             "scripts": [
-              "src/assets/slick/slick.min.js"
+              "src/assets/slick/slick.min.js",
+              "node_modules/tinymce/tinymce.min.js"
             ]
           },
           "configurations": {

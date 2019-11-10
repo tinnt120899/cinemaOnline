@@ -1,5 +1,5 @@
 
-<div class="card mb-3" *ngFor="let item of listRap; let i = index"  [ngClass]="{'opacity': i === 0 }">
+<div class="card mb-3" *ngFor="let item of listRap; let i = index"  routerLinkActive="opacity">
   <div class="row no-gutters" routerLink='/{{item.routeName}}'>
     <div class="col-md-2">
       <img src={{item.srcImage}} class="card-img" style="margin-top: 12px; margin-left: 10px">

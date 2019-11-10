@@ -1,33 +1,13 @@
 <div id="carouselExampleInterval" class="carousel slide" data-ride="carousel">
 
-  <div class="carousel-inner single-features">
+  <div class="carousel-inner single-features ">
     <div class="carousel-item active" data-interval="5000" >
       <img src="../../assets/img/header/natra.jpg" class="d-block w-100" alt="...">
     </div>
-    <div class="carousel-item " data-interval="2000" *ngFor="let link of linkImg">
-      <img src={{link.linkName}} class="d-block w-100" >
+    <div class="carousel-item" data-interval="2000" *ngFor="let i of linkImg">
+      <img src={{i.linkName}} class="d-block w-100">
     </div>
-    <a class="modal-view" href="#" data-toggle="modal" data-target="#productModal"><div class="icon"></div>
-      <!-- Modal -->
-      <div class="modal fade" id="productModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-          <div class="modal-content">
-            <div class="modal-body">
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button>
-              <!-- 16:9 aspect ratio -->
-              <div class="embed-responsive embed-responsive-16by9">
-                <iframe allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen frameborder="0"
-                        src="https://www.youtube.com/embed/t7srZZh9lxY"></iframe>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-    </a>
-  </div>
+    <a class="modal-view" href="#" data-toggle="modal" data-target="#myModal"><div class="icon"></div></a></div>
 
 <a class="carousel-control-prev" href="#carouselExampleInterval" role="button" data-slide="prev">
     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -39,4 +19,21 @@
   </a>
 </div>
 
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-body">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+        <!-- 16:9 aspect ratio -->
+        <div class="embed-responsive embed-responsive-16by9">
+          <iframe allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen frameborder="0"
+                  [src]="transform(link)"></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 

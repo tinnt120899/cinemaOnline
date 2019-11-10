@@ -8,14 +8,7 @@ import {ListPhimService} from '../../../service/list-phim.service';
 
 })
 export class WrapmovieComponent implements OnInit {
-  // tslint:disable-next-line:ban-types
-  suatChieu: [
-    {gioChieu: '10:00'},
-    {gioChieu: '11:00'},
-    {gioChieu: '12:00'}
-      ];
-  // tslint:disable-next-line:ban-types
-  listRap: Object;
+ listRap: {};
   constructor(private listPhimService: ListPhimService) {}
 
   ngOnInit() {

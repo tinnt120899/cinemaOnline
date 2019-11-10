@@ -8,6 +8,7 @@ import { faFilm } from '@fortawesome/free-solid-svg-icons';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
+
   fafilm = faFilm;
   tinhThanh: any = [
     {
