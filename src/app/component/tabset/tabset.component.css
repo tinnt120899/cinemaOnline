@@ -5,7 +5,7 @@
 }
 
 .card {
-
+  /*background-color: rgba(10, 32, 41, 0.1);*/
   padding-right: 0px;
   padding-left: 0px;
   border: 0;
@@ -13,15 +13,21 @@
 
 .tabset {
   padding-top: 75px;
-  max-width: 940px;
+  width: 1200px;
   float: none;
   margin: auto;
   clear: both;
+  right: 140px;
+
+}
+.carousel-inner{
+  width: 1080px;
+  left: 60px;
 
 }
 
 .carousel-item {
-  left: 20px;
+
 }
 
 p {
@@ -51,9 +57,11 @@ span {
 
 #quangCao {
   max-width: 980px;
+  left: 75px;
   float: none;
-  margin: auto;
+  margin: 0;
   clear: both;
+  margin-top: 30px;
   margin-bottom: 30px;
 }
 
@@ -84,6 +92,20 @@ span {
   background-color: transparent;
   font-size: 24px;
   font-family: 'Roboto', sans-serif;
+}
+/deep/ .carousel-control-prev-icon {
+  background-image: url("https://123phim.vn/app/assets/img/icons/back-session.png");
+  width: 60px;
+  height: 60px;
+  z-index: 2;
+  opacity: .5;
+}
+/deep/ .carousel-control-next-icon {
+  background-image: url("https://123phim.vn/app/assets/img/icons/next-session.png");
+  width: 60px;
+  height: 60px;
+  z-index: 2;
+  opacity: .5;
 }
 
 .carousel-control-prev {
@@ -205,4 +227,6 @@ button.modal-view:hover {
   width: 30px;
   padding-top: 1px;
 }
-
+.sr-only{
+  background-image: url("https://123phim.vn/app/assets/img/icons/back-session.png");
+}

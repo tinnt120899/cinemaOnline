@@ -13,7 +13,6 @@ nav {
 
 nav div a {
   cursor: pointer;
-  font-family: 'Pacifico', cursive;
   margin-right: 20px;
 
 }
@@ -35,12 +34,11 @@ header {
 
 main {
   grid-column-start: 2;
-
+  //background-color: rgba(10, 32, 41, 0.6);
 }
 
 section {
   text-align: center;
-
 }
 
 #thing {
@@ -50,4 +48,6 @@ section {
 .nav-info-right .dropdown button {
   margin-top: 10px;
 }
-
+.text-nav-link a{
+  text-decoration: none;
+}
