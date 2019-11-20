@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnChanges, OnInit, SimpleChanges} from '@angular/core';
 import {ListPhimService} from '../../../service/list-phim.service';
 
 @Component({
@@ -7,16 +7,26 @@ import {ListPhimService} from '../../../service/list-phim.service';
   styleUrls: ['./wrapmovie.component.scss'],
 
 })
-export class WrapmovieComponent implements OnInit {
- listRap: {};
+export class WrapmovieComponent implements OnInit, OnChanges {
+  @Input() routeName: string;
+  listRap: {};
+  lengthList: number;
   constructor(private listPhimService: ListPhimService) {}
 
   ngOnInit() {
-  this.listPhimService.getSuatChieuPhim(window.location.pathname.replace('/', '')).subscribe(res => {
+  this.listPhimService.getSuatChieuPhim(this.routeName).subscribe(res => {
       this.listRap = res;
       console.log(this.listRap);
-    // @ts-ignore
-      console.log(this.listRap[0].srcImageSm);
+      this.lengthList = Object.keys(this.listRap).length;
+    });
+  }
+
+  ngOnChanges(changes: SimpleChanges): void {
+    this.listPhimService.getSuatChieuPhim(this.routeName).subscribe(res => {
+      this.listRap = res;
+      // tslint:disable-next-line:no-console
+      console.log(this.listRap);
+      this.lengthList = Object.keys(this.listRap).length;
     });
   }
 

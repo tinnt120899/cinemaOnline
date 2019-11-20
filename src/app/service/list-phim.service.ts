@@ -20,4 +20,7 @@ export class ListPhimService {
   public getThongTinPhim(id) {
     return this.httpClient.get(this.REST_API_SERVER + 'thongtinphim/' + id);
   }
+  public getTinhThanh(tinhThanh) {
+    return this.httpClient.get(this.REST_API_SERVER + 'lichchieu/' + tinhThanh);
+  }
 }

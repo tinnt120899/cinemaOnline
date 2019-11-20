@@ -56,8 +56,8 @@ span {
 }
 
 #quangCao {
-  max-width: 980px;
-  left: 75px;
+  /*max-width: 1200px;*/
+  /*left: 6%;*/
   float: none;
   margin: 0;
   clear: both;
@@ -141,7 +141,8 @@ button.modal-view {
   height: 40px;
   transition: all 0.5s;
   cursor: pointer;
-  margin: 5px;
+  margin-left: 18px;
+  margin-top: 8px;
 }
 button.modal-view span{
   cursor: pointer;
@@ -170,11 +171,14 @@ button.modal-view:hover span:after {
   opacity: 1;
   right: 0;
 }
-
+.single-features{
+  margin-bottom: 30px;
+}
 .single-features:hover button.modal-view {
   transform: scale(1);
   z-index: 99;
-  opacity: 1
+  opacity: 1;
+
 }
 
 button.modal-view:hover {

@@ -40,7 +40,7 @@ export class RegisterComponent implements OnInit {
 
   formSubmit() {
     if (this.validationForm.valid) {
-      this.wizard.navigation.goToNextStep();
+     this.wizard.navigation.goToNextStep();
     }
     this.submit = true;
   }

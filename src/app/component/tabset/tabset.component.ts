@@ -29,6 +29,12 @@ export class TabsetComponent implements OnInit {
       // @ts-ignore
         this.list.listPhim = res;
       });
+    // this.listPhimService.getTinhThanh('hochiminh').subscribe(res => {
+    //   // @ts-ignore
+    //   this.list.listPhim = res;
+    //   // @ts-ignore
+    //   console.log(this.list.listPhim);
+    // });
   }
 
   InRange(end: number) {

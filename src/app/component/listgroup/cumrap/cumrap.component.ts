@@ -1,4 +1,4 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, EventEmitter, Input, OnChanges, OnInit, Output, SimpleChange, SimpleChanges} from '@angular/core';
 import {ListRapService} from '../../../service/list-rap.service';
 
 @Component({
@@ -6,17 +6,24 @@ import {ListRapService} from '../../../service/list-rap.service';
   templateUrl: './cumrap.component.html',
   styleUrls: ['./cumrap.component.scss']
 })
-export class CumRapComponent implements OnInit {
+export class CumRapComponent implements OnInit, OnChanges {
   @Input() nameList: any;
+  @Input() tinhThanh: any;
+  @Output() click = new EventEmitter<string>();
   // tslint:disable-next-line:ban-types
   listRap: Object;
   constructor(private listRapService: ListRapService) { }
 
   ngOnInit() {
-      this.listRapService.getListRap(this.nameList).subscribe(res => {
-        this.listRap = res;
-      });
+    }
+
+  ngOnChanges(changes: SimpleChanges): void {
+    this.listRapService.getListRap(this.nameList, this.tinhThanh).subscribe(res => {
+      this.listRap = res;
+    });
   }
 
-
+  Click(routeName: string) {
+    this.click.emit(routeName);
+  }
 }

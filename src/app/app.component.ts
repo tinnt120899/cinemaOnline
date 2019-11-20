@@ -1,5 +1,6 @@
-import { Component} from '@angular/core';
+import { Component, OnInit} from '@angular/core';
 import { faFilm } from '@fortawesome/free-solid-svg-icons';
+import {ListPhimService} from './service/list-phim.service';
 
 
 @Component({
@@ -29,5 +30,4 @@ export class AppComponent {
   // scroll(el: HTMLElement) {
   //   el.scrollIntoView({behavior: 'smooth', block: 'start', inline: 'nearest'});
   // }
-
 }
