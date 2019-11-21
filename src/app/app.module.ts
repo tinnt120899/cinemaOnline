@@ -22,6 +22,7 @@ import {ArchwizardModule} from 'angular-archwizard';
 import {Globals} from './service/globals.service';
 import {HeThongRapService} from './service/he-thong-rap.service';
 import { SeatMapComponent } from './component/seat-map/seat-map.component';
+import {BookTicketComponent} from './component/seat-map/book-ticket.component';
 
 
 @NgModule({
@@ -33,6 +34,7 @@ import { SeatMapComponent } from './component/seat-map/seat-map.component';
     LoginComponent,
     RegisterComponent,
     SeatMapComponent,
+    BookTicketComponent
   ],
   imports: [
     BrowserModule,
