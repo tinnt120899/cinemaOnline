@@ -14,18 +14,10 @@
       </div>
     </div>
     <div class="col-md-2" >
-      <button type="button" class="btn btn-outline-success" data-toggle="modal" data-target=".bd-example-modal-sm"
+      <button type="button" class="btn btn-outline-success" (click)="getId(item._id)" routerLink="/order"
               [ngClass]="{ 'disabled': item.trangThai === 'Sắp chiếu'}">Đặt vé</button>
     </div>
   </div>
   <hr>
 </div>
-</div>
-<!--modal-->
-<div class="modal fade bd-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-sm">
-    <div class="modal-content">
-     Vui lòng chọn suất chiếu :
-    </div>
-  </div>
 </div>

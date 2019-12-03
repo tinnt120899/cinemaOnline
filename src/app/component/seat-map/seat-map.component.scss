@@ -325,7 +325,7 @@ body {
 }
 //ticket-form
 .form-containers{
-  height: 700px;
+  height: 720px;
   width: 400px;
   background-color: #fff;
   box-shadow: 0 0 15px rgba(0, 0, 0, .3);
@@ -338,9 +338,9 @@ body {
 .row-header{
   height: 160px;
   width: 100%;
-  background-image: url("https://s3img.vcdn.vn/123phim/2019/11/phap-su-15743911575900.jpg");
+  //background-image: url("https://s3img.vcdn.vn/123phim/2019/11/phap-su-15743911575900.jpg");
   background-size: 400px;
-  margin: 0;
+  margin: 30px 0 0 0;
 }
 .row-info{
   height: 80px;

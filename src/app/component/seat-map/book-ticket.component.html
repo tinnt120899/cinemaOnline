@@ -1,10 +1,51 @@
+<div class="modal fade bd-example-modal-xl" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-xl">
+    <div class="modal-content">
+
+          <div class="ticket ticket-1">
+
+            <div class="date">
+              <span class="day">31</span>
+              <span class="month-and-time">OCT<br><span class="small">8PM</span></span>
+            </div>
+
+            <div class="artist">
+              <span class="name">PETER TOSH</span>
+              <br>
+              <span class="live small">LIVE</span>
+            </div>
+
+            <div class="location">
+              <span>KINGSTON TOWN</span>
+              <br>
+              <span class="small"><span>NANCY'S PUB</span>
+              </span>
+            </div>
+
+            <div class="rip">
+            </div>
+
+            <div class="cta">
+              <button class="buy" href="#">GRAB A TICKET</button>
+            </div>
+
+          </div>
+
+
+    </div>
+  </div>
+</div>
+
+
+<!--modal-->
 <div class="form-containers">
   <div class="row-title">
-    <h5>Ngốc ơi tuổi 17</h5>
-    <span>BHD Cinema 3 tháng 2</span><br>
-    <span>890 3 tháng 2 quận 10 tp HCM</span>
+    <h5>{{listPhim.tenPhim}}</h5>
+    <span style="font-weight: bold">{{listRap.tenRap}}</span><br>
+    <span>{{listRap.diaChi}}</span>
   </div>
-  <div class="row row-header"></div>
+
+  <div class="row row-header" [style.background-image]="'url(' + listPhim.srcImageLg + ')' "></div>
   <div class="row row-info">
   <span>
     <input class="gate" id="class" placeholder="Email!" type="text"/><label for="class">Email</label>
@@ -36,15 +77,13 @@
     <div class="form-group">
       <label for="sel2" style="margin-right: 30px">Suất chiếu:</label>
       <select class="form-control" id="sel2">
-        <option>1</option>
-        <option>2</option>
-        <option>3</option>
-        <option>4</option>
+        <option *ngFor="let item of listPhim.suatChieu">{{item}}</option>
       </select>
     </div>
     <hr class="hr">
   </div>
   <div class="row row-info" style="margin: 40px 0 0 0; padding: 0 22px 0 22px">
-    <button type="button" class="btn btn-success w-100" style="height: 50px">180.000đ</button>
+    <button type="button" class="btn btn-success w-100" style="height: 50px"
+            data-toggle="modal" data-target=".bd-example-modal-xl">180.000đ</button>
   </div>
 </div>

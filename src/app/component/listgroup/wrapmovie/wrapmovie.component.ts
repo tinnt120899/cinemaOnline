@@ -1,5 +1,6 @@
 import {Component, Input, OnChanges, OnInit, SimpleChanges} from '@angular/core';
 import {ListPhimService} from '../../../service/list-phim.service';
+import {Globals} from '../../../service/globals.service';
 
 @Component({
   selector: 'app-wrapmovie',
@@ -11,12 +12,12 @@ export class WrapmovieComponent implements OnInit, OnChanges {
   @Input() routeName: string;
   listRap: {};
   lengthList: number;
-  constructor(private listPhimService: ListPhimService) {}
+  constructor(private listPhimService: ListPhimService,
+              private globals: Globals) {}
 
   ngOnInit() {
   this.listPhimService.getSuatChieuPhim(this.routeName).subscribe(res => {
       this.listRap = res;
-      console.log(this.listRap);
       this.lengthList = Object.keys(this.listRap).length;
     });
   }
@@ -24,10 +25,11 @@ export class WrapmovieComponent implements OnInit, OnChanges {
   ngOnChanges(changes: SimpleChanges): void {
     this.listPhimService.getSuatChieuPhim(this.routeName).subscribe(res => {
       this.listRap = res;
-      // tslint:disable-next-line:no-console
-      console.log(this.listRap);
       this.lengthList = Object.keys(this.listRap).length;
     });
   }
 
+  getId(id: any) {
+    this.globals.idSuatChieu = id;
+  }
 }

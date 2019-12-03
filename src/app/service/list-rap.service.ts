@@ -13,4 +13,8 @@ export class ListRapService {
   public getListRap(tenrap, tinhThanh) {
     return this.httpClient.get(this.REST_API_SERVER + '?heThongRap=' + tenrap + '&tinhThanh=' + tinhThanh);
   }
+
+  public  getListRapById(id) {
+    return this.httpClient.get(this.REST_API_SERVER + '/' + id);
+  }
 }

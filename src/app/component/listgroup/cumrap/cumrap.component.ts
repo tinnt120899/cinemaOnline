@@ -1,5 +1,6 @@
 import {Component, EventEmitter, Input, OnChanges, OnInit, Output, SimpleChange, SimpleChanges} from '@angular/core';
 import {ListRapService} from '../../../service/list-rap.service';
+import {Globals} from '../../../service/globals.service';
 
 @Component({
   selector: 'app-cumrap',
@@ -12,7 +13,8 @@ export class CumRapComponent implements OnInit, OnChanges {
   @Output() click = new EventEmitter<string>();
   // tslint:disable-next-line:ban-types
   listRap: Object;
-  constructor(private listRapService: ListRapService) { }
+  constructor(private listRapService: ListRapService,
+              private globals: Globals) { }
 
   ngOnInit() {
     }
@@ -23,7 +25,8 @@ export class CumRapComponent implements OnInit, OnChanges {
     });
   }
 
-  Click(routeName: string) {
+  Click(routeName: string, id: string) {
     this.click.emit(routeName);
+    this.globals.idRap = id;
   }
 }

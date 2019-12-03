@@ -6,6 +6,7 @@ declare var $: any;
   styleUrls: ['./seat-map.component.scss']
 })
 export class SeatMapComponent implements OnInit {
+  listSeatMap: {};
 
   constructor() { }
   ngOnInit() {
