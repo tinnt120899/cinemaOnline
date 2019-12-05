@@ -23,6 +23,9 @@ import {Globals} from './service/globals.service';
 import {HeThongRapService} from './service/he-thong-rap.service';
 import { SeatMapComponent } from './component/seat-map/seat-map.component';
 import {BookTicketComponent} from './component/seat-map/book-ticket.component';
+import {LichChieuService} from './service/lich-chieu.service';
+import {PagesService} from './service/pages.service';
+import {NewsInfoComponent} from './component/page/news/news-info/news-info.component';
 
 
 @NgModule({
@@ -34,7 +37,8 @@ import {BookTicketComponent} from './component/seat-map/book-ticket.component';
     LoginComponent,
     RegisterComponent,
     SeatMapComponent,
-    BookTicketComponent
+    BookTicketComponent,
+    NewsInfoComponent
   ],
   imports: [
     BrowserModule,
@@ -51,7 +55,7 @@ import {BookTicketComponent} from './component/seat-map/book-ticket.component';
     FormsModule,
     ArchwizardModule
   ],
-  providers: [ListPhimService, ListRapService, Globals, HeThongRapService],
+  providers: [ListPhimService, ListRapService, Globals, HeThongRapService, LichChieuService, PagesService],
   bootstrap: [AppComponent]
 })
 export class AppModule {

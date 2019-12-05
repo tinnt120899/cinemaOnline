@@ -5,6 +5,7 @@ import {NewsComponent} from './component/page/news/news.component';
 import {LoginComponent} from './component/page/login/login.component';
 import {RegisterComponent} from './component/page/register/register.component';
 import {SeatMapComponent} from './component/seat-map/seat-map.component';
+import {NewsInfoComponent} from './component/page/news/news-info/news-info.component';
 
 
 
@@ -23,6 +24,10 @@ const routes: Routes = [
   {
     path: 'tintuc',
     component: NewsComponent
+  },
+  {
+    path: 'news-info/:id',
+    component: NewsInfoComponent
   },
   {
     path: 'login',

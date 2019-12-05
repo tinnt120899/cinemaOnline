@@ -7,7 +7,7 @@ import {Globals} from './globals.service';
 })
 export class ListRapService {
   private REST_API_SERVER = 'http://localhost:8085/cumrap';
-  constructor(private httpClient: HttpClient, private globals: Globals) {
+  constructor(private httpClient: HttpClient) {
   }
 
   public getListRap(tenrap, tinhThanh) {

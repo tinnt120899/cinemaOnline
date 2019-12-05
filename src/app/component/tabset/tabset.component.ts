@@ -42,7 +42,6 @@ export class TabsetComponent implements OnInit {
   }
 
   getId(id: any[]) {
-    console.log(id);
     return id;
   }
 }

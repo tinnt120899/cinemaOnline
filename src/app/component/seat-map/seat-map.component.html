@@ -11,9 +11,91 @@
       <ol class="cabin fuselage">
         <li class="row row--A">
           <ol class="seats" type="A">
-            <li class="seat">
-            <input type="checkbox" id="A1" />
-            <label for="A1">A1</label>
+            <li class="seat" *ngFor="let item of maxRow(8); let i = index"
+                              [ngClass]="{'seat-vip': loaiGhe[i] === 1}">
+            <input type="checkbox" id="{{listTenGhe[i]}}" [disabled] = "listTrangThai[i]"/>
+            <label for="{{listTenGhe[i]}}" id="{{listTenGhe[i] + 's'}}"(click)="getGhe(listTenGhe[i] + 's', listTenGhe[i])">{{listTenGhe[i]}}</label>
+            </li>
+          </ol>
+        </li>
+        <li class="row row--B">
+          <ol class="seats" type="B">
+            <li class="seat" *ngFor="let item of maxRow(8); let i = index"
+                              [ngClass]="{'seat-vip': loaiGhe[i + 8] === 1}">
+              <input type="checkbox" id="{{listTenGhe[i + 8]}}" [disabled] = "listTrangThai[i + 8]"/>
+              <label for="{{listTenGhe[i + 8]}}" id="{{listTenGhe[i + 8] + 's'}}"(click)="getGhe(listTenGhe[i + 8] + 's', listTenGhe[i + 8])">{{listTenGhe[i + 8]}}</label>
+            </li>
+          </ol>
+        </li>
+        <li class="row row--C">
+          <ol class="seats" type="C">
+            <li class="seat" *ngFor="let item of maxRow(8); let i = index"
+                              [ngClass]="{'seat-vip': loaiGhe[i + 16] === 1}">
+              <input type="checkbox" id="{{listTenGhe[i + 16]}}" [disabled] = "listTrangThai[i + 16]"/>
+              <label for="{{listTenGhe[i + 16]}}" id="{{listTenGhe[i + 16] + 's'}}"(click)="getGhe(listTenGhe[i + 16] + 's', listTenGhe[i + 16])">{{listTenGhe[i + 16]}}</label>
+            </li>
+          </ol>
+        </li>
+        <li class="row row--D">
+          <ol class="seats" type="D">
+            <li class="seat" *ngFor="let item of maxRow(8); let i = index"
+                              [ngClass]="{'seat-vip': loaiGhe[i + 24] === 1}">
+              <input type="checkbox" id="{{listTenGhe[i + 24]}}" [disabled] = "listTrangThai[i + 24]"/>
+              <label for="{{listTenGhe[i + 24]}}" id="{{listTenGhe[i + 24] + 's'}}"(click)="getGhe(listTenGhe[i + 24] + 's', listTenGhe[i + 24])">{{listTenGhe[i + 24]}}</label>
+            </li>
+          </ol>
+        </li>
+        <li class="row row--E">
+          <ol class="seats" type="E">
+            <li class="seat" *ngFor="let item of maxRow(8); let i = index"
+                              [ngClass]="{'seat-vip': loaiGhe[i + 32] === 1}">
+              <input type="checkbox" id="{{listTenGhe[i + 32]}}" [disabled] = "listTrangThai[i + 32]"/>
+              <label for="{{listTenGhe[i + 32]}}" id="{{listTenGhe[i + 32] + 's'}}"(click)="getGhe(listTenGhe[i + 32] + 's', listTenGhe[i + 32])">{{listTenGhe[i + 32]}}</label>
+            </li>
+          </ol>
+        </li>
+        <li class="row row--F">
+          <ol class="seats" type="F">
+            <li class="seat" *ngFor="let item of maxRow(8); let i = index"
+                              [ngClass]="{'seat-vip': loaiGhe[i + 40] === 1}">
+              <input type="checkbox" id="{{listTenGhe[i + 40]}}" [disabled] = "listTrangThai[i + 40]"/>
+              <label for="{{listTenGhe[i + 40]}}" id="{{listTenGhe[i + 40] + 's'}}"(click)="getGhe(listTenGhe[i + 40] + 's', listTenGhe[i + 40])">{{listTenGhe[i + 40]}}</label>
+            </li>
+          </ol>
+        </li>
+        <li class="row row--G">
+          <ol class="seats" type="G">
+            <li class="seat" *ngFor="let item of maxRow(8); let i = index"
+                              [ngClass]="{'seat-vip': loaiGhe[i + 48] === 1}">
+              <input type="checkbox" id="{{listTenGhe[i + 48]}}" [disabled] = "listTrangThai[i + 48]"/>
+              <label for="{{listTenGhe[i + 48]}}" id="{{listTenGhe[i + 48] + 's'}}"(click)="getGhe(listTenGhe[i + 48] + 's', listTenGhe[i + 48])">{{listTenGhe[i + 48]}}</label>
+            </li>
+          </ol>
+        </li>
+        <li class="row row--H">
+          <ol class="seats" type="H">
+            <li class="seat" *ngFor="let item of maxRow(8); let i = index"
+                              [ngClass]="{'seat-vip': loaiGhe[i + 56] === 1}">
+              <input type="checkbox" id="{{listTenGhe[i + 56]}}" [disabled] = "listTrangThai[i + 56]"/>
+              <label for="{{listTenGhe[i + 56]}}" id="{{listTenGhe[i + 56] + 's'}}"(click)="getGhe(listTenGhe[i + 56] + 's', listTenGhe[i + 56])">{{listTenGhe[i + 56]}}</label>
+            </li>
+          </ol>
+        </li>
+        <li class="row row--I">
+          <ol class="seats" type="I">
+            <li class="seat" *ngFor="let item of maxRow(8); let i = index"
+                              [ngClass]="{'seat-vip': loaiGhe[i + 64] === 1}">
+              <input type="checkbox" id="{{listTenGhe[i + 64]}}" [disabled] = "listTrangThai[i + 64]"/>
+              <label for="{{listTenGhe[i + 64]}}" id="{{listTenGhe[i + 64] + 's'}}"(click)="getGhe(listTenGhe[i + 64] + 's', listTenGhe[i + 64])">{{listTenGhe[i + 64]}}</label>
+            </li>
+          </ol>
+        </li>
+        <li class="row row--J">
+          <ol class="seats" type="J">
+            <li class="seat" *ngFor="let item of maxRow(8); let i = index"
+                              [ngClass]="{'seat-vip': loaiGhe[i + 72] === 1}">
+              <input type="checkbox" id="{{listTenGhe[i + 72]}}" [disabled] = "listTrangThai[i + 72]"/>
+              <label for="{{listTenGhe[i + 72]}}" id="{{listTenGhe[i + 72] + 's'}}"(click)="getGhe(listTenGhe[i + 72] + 's', listTenGhe[i + 72])">{{listTenGhe[i + 72]}}</label>
             </li>
           </ol>
         </li>
@@ -21,7 +103,12 @@
     </div>
   </div>
   <div class="col-sm-4">
-<app-book-ticket></app-book-ticket>
+<app-book-ticket (pushListTenGhe)="getListTenGhe($event)"
+                 (pushListTrangThai)="getListTrangThai($event)"
+                  [gheSelected]="gheSelected"
+                  [giaVe]="giaVe">
+
+</app-book-ticket>
   </div>
 </div>
 

@@ -29,7 +29,7 @@ export class WrapmovieComponent implements OnInit, OnChanges {
     });
   }
 
-  getId(id: any) {
-    this.globals.idSuatChieu = id;
+  getId(id: string) {
+    this.globals.idListPhim = id;
   }
 }

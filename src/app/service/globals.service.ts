@@ -5,6 +5,9 @@ import { Injectable } from '@angular/core';
 export class Globals {
   tinhThanh = 'hcm';
   idRap: string
-  idSuatChieu: string;
+  idListPhim: string;
   idThongTinPhim: string;
+  idPhim: string;
+  idSuatChieu: string;
+  idSeatMap: string;
 }
