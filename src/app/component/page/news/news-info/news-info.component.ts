@@ -12,8 +12,9 @@ export class NewsInfoComponent implements OnInit {
   constructor(private pagesService: PagesService) { }
 
   ngOnInit() {
-    this.pagesService.getNewsInfoById(window.location.pathname.replace('/news-info/', '')).subscribe(res => {
-      this.listNewsInfo = res[0];
+    this.pagesService.getNewsInfoById(window.location.pathname.replace('/news-info/', '')).subscribe(data => {
+      this.listNewsInfo = data;
+      console.log(this.listNewsInfo);
     });
   }
 

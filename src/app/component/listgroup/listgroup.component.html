@@ -1,13 +1,9 @@
 <!-- Example single danger button -->
-<div class="btn-group">
-  <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    {{tinhThanhDropdown}}
-  </button>
-  <div class="dropdown-menu">
-    <a class="dropdown-item" (click)="ChangeTinhThanh('hcm')">Hồ Chí Minh</a>
-    <a class="dropdown-item" (click)="ChangeTinhThanh('hn')">Hà Nội</a>
-    <a class="dropdown-item" (click)="ChangeTinhThanh('cm')">Cà Mau</a>
-  </div>
+<div class="section-custom">
+  <select class="form-control" (change)='ChangeTinhThanh($event.target.value)'>
+    <option>Chọn Tỉnh Thành</option>
+    <option *ngFor="let item of danhSachTinhThanh" >{{item}}</option>
+  </select>
 </div>
 <div class="card tablist">
   <div class="row">

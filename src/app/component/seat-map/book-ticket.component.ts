@@ -35,27 +35,33 @@ export class BookTicketComponent implements OnInit {
 
   ngOnInit() {
     this.listRapService.getListRapById(this.globals.idRap).subscribe(res => {
-      this.listRap = res[0];
+      this.listRap = res;
+      console.log(res);
     });
 
     this.listPhimService.getThongTinPhim(this.globals.idListPhim).subscribe(res => {
-      this.listPhim = res[0];
+      this.listPhim = res;
+      console.log(res);
       // @ts-ignore
       this.lichChieuService.getNgayChieu(this.listPhim.idPhim).subscribe(res2 => {
         this.listNgayChieu = res2;
+        console.log(res2);
       });
     });
   }
 
   getSuatChieu(idSuatChieu: string) {
+    console.log(idSuatChieu);
     this.lichChieuService.getSuatChieu(idSuatChieu).subscribe(res => {
       this.listSuatChieu = res;
+      console.log(res);
     });
   }
 
   getSeatMap(idSeatMap: string) {
     this.lichChieuService.getSeatMap(idSeatMap).subscribe(res => {
       this.listSeatMap = res;
+      console.log(res);
       // @ts-ignore
       const trangThaiGhe = res.trangThaiGhe;
       this.pushListTrangThai.emit(trangThaiGhe);

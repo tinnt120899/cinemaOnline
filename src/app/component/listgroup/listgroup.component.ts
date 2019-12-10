@@ -13,27 +13,23 @@ export class ListGroupComponent implements OnInit {
   tinhThanh: string;
   tinhThanhDropdown: string;
   routeName: string;
+  danhSachTinhThanh = this.globals.listCity;
 
   constructor(private globals: Globals, private heThongRapService: HeThongRapService) {
   }
 
   ngOnInit() {
-    this.ChangeTinhThanh('hcm');
+    this.ChangeTinhThanh('TP Hồ Chí Minh');
    }
 
 
   ChangeTinhThanh(tinhThanh: string) {
     this.tinhThanh = tinhThanh;
+    console.log(tinhThanh)
     this.heThongRapService.getHeThongRap(this.tinhThanh).subscribe(res => {
       this.listCinema = res;
+      console.log(res);
     });
-    if ( tinhThanh === 'hcm') {
-      return this.tinhThanhDropdown = 'Hồ Chí Minh';
-    } else if ( tinhThanh === 'hn') {
-      return this.tinhThanhDropdown = 'Hà Nội';
-    } else if ( tinhThanh === 'cm') {
-      return this.tinhThanhDropdown = 'Cà Mau';
-    }
   }
 
   click($event) {

@@ -18,6 +18,7 @@ export class WrapmovieComponent implements OnInit, OnChanges {
   ngOnInit() {
   this.listPhimService.getSuatChieuPhim(this.routeName).subscribe(res => {
       this.listRap = res;
+      console.log(res);
       this.lengthList = Object.keys(this.listRap).length;
     });
   }
@@ -31,5 +32,6 @@ export class WrapmovieComponent implements OnInit, OnChanges {
 
   getId(id: string) {
     this.globals.idListPhim = id;
+    console.log(id);
   }
 }

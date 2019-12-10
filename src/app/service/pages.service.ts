@@ -12,9 +12,9 @@ export class PagesService {
   }
 
   public getNews() {
-    return this.httpClient.get(this.REST_API_SERVER + 'news');
+    return this.httpClient.get(this.REST_API_SERVER + 'admin/news');
   }
   public getNewsInfoById(id) {
-    return this.httpClient.get(this.REST_API_SERVER + 'news/' + id);
+    return this.httpClient.get(this.REST_API_SERVER + 'admin/news/' + id);
   }
 }

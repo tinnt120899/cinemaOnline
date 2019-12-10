@@ -20,8 +20,8 @@ export class MovieInfoComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.listPhimService.getThongTinPhim(window.location.pathname.replace('/thongtinphim/', '')).subscribe(res => {
-      this.thongTinPhim = res[0];
+    this.listPhimService.getThongTinPhim(window.location.pathname.replace('/danhsachphim/', '')).subscribe(res => {
+      this.thongTinPhim = res;
       // @ts-ignore
       this.link = 'https://www.youtube.com/embed/' + this.thongTinPhim.linkTrailer;
 

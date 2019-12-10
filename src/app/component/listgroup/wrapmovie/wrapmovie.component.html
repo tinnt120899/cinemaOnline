@@ -8,14 +8,14 @@
       <div class="card-body">
         <p class="card-text spanItem text-danger"><b>{{item.tenPhim}}</b></p>
         <p class="card-text spanItem">{{item.thoiLuongChieu}}</p>
-        <span class="float-left" *ngFor="let item2 of item.suatChieu">
-          <span class="badge badge-success">{{item2}}</span>
+        <span class="float-left">
+          <span class="badge badge-success">{{item.trangThai}}</span>
         </span>
       </div>
     </div>
     <div class="col-md-2" >
       <button type="button" class="btn btn-outline-success" (click)="getId(item._id)" routerLink="/order"
-              [ngClass]="{ 'disabled': item.trangThai === 'Sắp chiếu'}">Đặt vé</button>
+              [ngClass]="{ 'd-none': item.trangThai === 'Sắp chiếu'}">Đặt vé</button>
     </div>
   </div>
   <hr>

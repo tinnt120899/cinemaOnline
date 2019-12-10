@@ -4,7 +4,7 @@ import {HttpClient} from '@angular/common/http';
 
 @Injectable()
 export class HeThongRapService {
-  private REST_API_SERVER = 'http://localhost:8085/hethongrap';
+  private REST_API_SERVER = 'http://localhost:8085/admin/hethongrap/tinhthanh';
   constructor(private httpClient: HttpClient) {
   }
   public getHeThongRap(tinhThanh) {

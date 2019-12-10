@@ -8,7 +8,7 @@ import {MovieInfoComponent} from './movie-info/movie-info.component';
 
 const routes: Routes = [
   {
-    path: 'thongtinphim/:id',
+    path: 'danhsachphim/:id',
     component: MovieInfoComponent
   }
 

@@ -1,5 +1,5 @@
 .tablist{
-  margin-top: 60px !important;
+  margin-top: 200px !important;
   margin-bottom: 60px !important;
   max-width: 940px;
   float: none;
@@ -33,5 +33,14 @@ img{
   font-size: 12px;
   font-family: 'Roboto', sans-serif;
 }
-
+.section-custom{
+  position: sticky;
+  top: 9px;
+  left: 960px;
+  width: 200px;
+  z-index: 99999;
+}
+.section-custom select{
+  width: 100%;
+}
 

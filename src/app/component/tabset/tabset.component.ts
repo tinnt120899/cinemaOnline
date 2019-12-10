@@ -25,16 +25,10 @@ export class TabsetComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.listPhimService.getListPhim().subscribe(res => {
+    this.listPhimService.getListPhim().subscribe(data => {
       // @ts-ignore
-        this.list.listPhim = res;
+        this.list.listPhim = data.content;
       });
-    // this.listPhimService.getTinhThanh('hochiminh').subscribe(res => {
-    //   // @ts-ignore
-    //   this.list.listPhim = res;
-    //   // @ts-ignore
-    //   console.log(this.list.listPhim);
-    // });
   }
 
   InRange(end: number) {
