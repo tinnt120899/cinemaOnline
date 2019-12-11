@@ -26,6 +26,8 @@ import {BookTicketComponent} from './component/seat-map/book-ticket.component';
 import {LichChieuService} from './service/lich-chieu.service';
 import {PagesService} from './service/pages.service';
 import {NewsInfoComponent} from './component/page/news/news-info/news-info.component';
+import {ToasterService} from './toaster.service';
+import {SentgmailService} from './service/sentgmail.service';
 
 
 @NgModule({
@@ -55,7 +57,7 @@ import {NewsInfoComponent} from './component/page/news/news-info/news-info.compo
     FormsModule,
     ArchwizardModule
   ],
-  providers: [ListPhimService, ListRapService, Globals, HeThongRapService, LichChieuService, PagesService],
+  providers: [ListPhimService, ListRapService, Globals, HeThongRapService, LichChieuService, PagesService, ToasterService, SentgmailService],
   bootstrap: [AppComponent]
 })
 export class AppModule {

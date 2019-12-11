@@ -3,6 +3,7 @@ import {ListPhimService} from '../../service/list-phim.service';
 import {ListRapService} from '../../service/list-rap.service';
 import {Globals} from '../../service/globals.service';
 import {LichChieuService} from '../../service/lich-chieu.service';
+import {SentgmailService} from '../../service/sentgmail.service';
 
 @Component({
   selector: 'app-book-ticket',
@@ -10,6 +11,7 @@ import {LichChieuService} from '../../service/lich-chieu.service';
   styleUrls: ['./seat-map.component.scss']
 })
 export class BookTicketComponent implements OnInit {
+
   @Output() private pushListTenGhe = new EventEmitter<Array<string>>();
   @Output() private pushListTrangThai = new EventEmitter<Array<string>>();
   @Input() gheSelected = [];
@@ -21,27 +23,33 @@ export class BookTicketComponent implements OnInit {
   listSeatMap: {};
   listTenGhe = [];
   ten: string;
-  idPhim: string;
-  idSuatChieu: string;
-  idSeatMap: string;
   hang: number;
   viTri: number;
 
+  tenPhim: string;
+  tenRap: string;
+  gmail: string;
+  noiDung: string ;
   constructor(private listPhimService: ListPhimService,
               private listRapService: ListRapService,
               private lichChieuService: LichChieuService,
-              private globals: Globals) {
+              private globals: Globals,
+              private gmailService: SentgmailService) {
   }
 
   ngOnInit() {
     this.listRapService.getListRapById(this.globals.idRap).subscribe(res => {
       this.listRap = res;
-      console.log(res);
+      // @ts-ignore
+      this.tenRap = this.listRap.tenRap;
+      console.log(this.tenRap);
     });
 
     this.listPhimService.getThongTinPhim(this.globals.idListPhim).subscribe(res => {
       this.listPhim = res;
-      console.log(res);
+      // @ts-ignore
+      this.tenPhim = this.listPhim.tenPhim;
+      console.log(this.tenPhim);
       // @ts-ignore
       this.lichChieuService.getNgayChieu(this.listPhim.idPhim).subscribe(res2 => {
         this.listNgayChieu = res2;
@@ -75,4 +83,17 @@ export class BookTicketComponent implements OnInit {
       this.pushListTenGhe.emit(this.listTenGhe);
     });
  }
+
+  sentmail() {
+    this.noiDung = 'Chúc mừng bạn đã đặt thành công vé, hãy quét QR tại quầy để xác nhận trước khi xem phim, cảm ơn bạn!!!'
+    this.gmailService.sentgmail(this.gmail, this.noiDung).subscribe(res => {
+      console.log(res);
+    });
+  }
+
+  getEmail(value: string) {
+    this.gmail = value;
+    console.log(this.gmail);
+  }
+
 }
